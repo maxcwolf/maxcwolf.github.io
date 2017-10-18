@@ -1,20 +1,48 @@
+
+
 <html>
     <head>
-        <title>Welcome to my personal site</title>
+        <title>Max Wolf's Personal Site</title>
         <link href=style.css rel=stylesheet>
+        <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara|Josefin+Slab|Leckerli+One" rel="stylesheet">
     </head>
 
     <body>
-        <header>
-            <h1>I am in cohort 22
-            </h1>
+        <header class="title">
+            <h1 class="mainHeader">Max Wolf</h1>
+            <h2 class="secondaryHeader">The Web Experience</h2>
+            <img id="wolfimg" src=pics/wolf.jpg alt=wolf>
         </header>
-        <article id="intro" class="article">
-            Hello, I'm Max!
-        </article>
+        
+        <nav>
+            <ul class="mainNav">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-        <article id="history" class="article">
-            Previously, worked somewhere.
-        </article>
+        <section class="mainContent">
+            <article id="intro" class="article">
+                Hi! My name is Max Wolf. I am an aspiring software developer currently enrolled in the Nashville Software School. This is my first attempt at creating a website. I hope you enjoy it!
+            </article>
+          
+            <article id="history" class="article">
+                <h3>History</h3>
+                Before coming to NSS, I was a Data Manager at a public health research firm specializing in studying ways to change people's health behaviors. This wasn't what I had imagined doing when I got out of college, but I had a knack for staring at a computer all day and trying to make it do what I wanted. I quickly realized that my abilities might be better suited towards programming.
+            </article>
+        </section>
+        <section id="contact" class="contact">
+            <h3>Contact</h3>
+                <ul class="contactList">
+                    <li><a href="http://www.instagram.com/maxicanfood" ><img class=contactImg id=instagram src="pics/instagram.png" alt="@maxicanfood"></a></li>
+                    <li><a href="http://www.facebook.com"><img class=contactImg id=facebook src="pics/facebook.png" alt="facebook"></a></li>
+                    <li><a href="www.github.com/maxcwolf"><img class=contactImg id=github src="pics/github.png"></a></li>
+                </ul>
+        </section>
+        <footer>
+
+        </footer>
     </body>
 </html>
