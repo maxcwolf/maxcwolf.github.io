@@ -10,7 +10,7 @@ let blogCombined = '';
 //iterating over the storedBlogs array and writing the innerhtml to blogCombined
 for (i = 0; i < storedBlogs.length; i++) {
     blogCombined += `
-        <div class='blogPost' id='blog'${storedBlogs[i].id}>
+        <article class='blogPost' id='blog'${storedBlogs[i].id}>
             <h2>${storedBlogs[i].id}.  ${storedBlogs[i].title}</h2>
             <p>${storedBlogs[i].body}</p>
             <ul class='tags'>`
@@ -20,7 +20,7 @@ for (i = 0; i < storedBlogs.length; i++) {
         <li>${storedBlogs[i].tags[j]}</li>
         `
     }
-    blogCombined += `</ul></div>`
+    blogCombined += `</ul></article>`
 }
 console.log(storedBlogs[0].tags);
 blogElement.innerHTML += blogCombined;
