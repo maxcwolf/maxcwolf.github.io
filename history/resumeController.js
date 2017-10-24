@@ -1,11 +1,17 @@
 // get database from local storage
+const storedHistory = JSON.parse(localStorage.getItem("history"));
 const storedResume = JSON.parse(localStorage.getItem("resume"));
 
 // finding the html element to add data to below. 
+const historyElement = document.getElementById("history");
 const resumeElement = document.getElementById("resume");
 
 console.log(storedResume);
 
+//***********HISTORY ***********//
+historyElement.innerHTML += `<h1>My History</h1><p>${storedHistory[0]}</p><p>${storedHistory[1]}</p>`;
+
+//*********RESUME SECTION********//
 let resumeCombined = "";
 
 //PROFESSIONAL EXPERIENCE
