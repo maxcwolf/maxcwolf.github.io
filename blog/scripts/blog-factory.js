@@ -69,7 +69,7 @@ function storeNewBlog() {
     //serialize and store database
     localStorage.setItem("BlogDatabase", JSON.stringify(BlogDatabase));
 
-    //reload the page
+    //reload the page so that the newly entered data is displayed on the page (may not work properly when utilizing pagination)
     location.reload();
 }
 
