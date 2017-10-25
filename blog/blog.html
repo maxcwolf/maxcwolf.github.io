@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>The Wolf Blog</title>
+        <link href='../style.css' rel=stylesheet>
+        <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara|Josefin+Slab|Leckerli+One" rel="stylesheet">
+    </head>
+    <body>
+        
+        <header class="secondTitle">
+            <ul class="secondaryTitle">
+                <li>LOBO'S</li>
+                <li id="wolfLi"><img class="secondaryWolf" src='../pics/wolf.jpg' alt=wolf></li>
+                <li>BLOGO</li>
+            </ul>
+        </header>
+
+        <nav>
+            <ul class="mainNav" id='navBar'>
+            </ul>
+        </nav>
+
+        <section id=blogs>
+
+
+        </section>
+
+        <form id='blogForm'>
+            <h2>Make a Blog Post</h2>
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="titleID" name="titleName">
+            </div>
+            <div>
+                <label for="tags">Tag your blog:</label>
+                <input type-"text" id="tagsID" name="tagsName">
+            </div>
+            <div>
+                <label for="blog">Write your blog:</label>
+                <textarea id="blogID" name="blogName"></textarea>
+            </div>
+             
+        </form>
+                <div class="button">
+                    <button id='submitButt' type="submit">Post your blog article</button>
+                </div>
+
+        <nav id='paginator'>
+
+        </nav>
+
+        <script src="/nav/scripts/nav-factory.js"></script>
+        <script src="/nav/scripts/nav-controller.js"></script>
+        <script src='/blog/scripts/blog-factory.js'></script>
+        <script src='/blog/scripts/blog-controller.js'></script>        
+    </body>
+
+</html>
