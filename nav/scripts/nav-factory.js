@@ -1,27 +1,27 @@
 //nav bar object
 const homeNav = {
     'name' : 'Home',
-    'link' : "./index.html"
+    'link' : "/index.html"
 }
 
 const bioNav = {
     'name' : 'Bio',
-    'link' : "./bio.html"
+    'link' : "/bio/bio.html"
 }
 
 const historyNav = {
     'name' : 'History',
-    'link' : "history/history.html"
+    'link' : "/history/history.html"
 }
 
 const blogNav = {
     'name' : 'Blog',
-    'link' : "blog/blog.html"
+    'link' : "/blog/blog.html"
 }
 
 const contactNav = {
     'name' : 'Contact',
-    'link' : "./contact.html"
+    'link' : "/contact/contact.html"
 }
 
 //create blank nav bar array
