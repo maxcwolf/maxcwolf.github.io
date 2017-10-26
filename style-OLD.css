@@ -64,7 +64,7 @@ body {
 /* nav li + li:before{
     content: " | ";
     padding: 0 10px; */
-}
+/* } */
 
 /******  selector pseudo classes (link styles when clicked/not clicked/hovering) */
 
@@ -136,23 +136,10 @@ a:active {
  }
 
 .article {
-    color: black;
-    padding-top: 16px;
+    border: 1px solid #ffdead;
+    color: goldenrod;
 }
 
 #intro {
-    font-size: 1em;
-}
-
-.contactImg {
-    width: 5%;
-    margin: auto;
-}
-
-#roxy {
-    border-radius: 50%;
-    display: block;
-    margin: auto;
-    padding-top: 5%;
-    width: 20%;
+    font-size: 3em;
 }

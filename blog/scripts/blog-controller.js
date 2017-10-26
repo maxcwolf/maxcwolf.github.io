@@ -82,25 +82,26 @@ function produceBlog (event) {
 
     console.log(itemsToDisplay);
 
+
     // Display a <section> representation of each data object
     for (let i = 0; i < itemsToDisplay.length; i++) {
         let currentBlog = itemsToDisplay[i];
-        
+
         // for (i = 0; i < storedBlogs.articles.length; i++) {
             blogCombined += `
                 <article class='blogPost' id='blog'${itemsToDisplay[i].id}>
                     <h2>${itemsToDisplay[i].id}.  ${itemsToDisplay[i].title}</h2>
+                    <p>By: ${itemsToDisplay[i].author}  |  Published on: ${itemsToDisplay[i].published.slice(0, -18)}</p>
                     <p>${itemsToDisplay[i].body}</p>
-                    <ul class='blogPost__tags'>`
+                    <ul class='blogPost__tags'>Tags: `
             //loop to include varying number of tags to each post
-            for (j = 0; j < itemsToDisplay[i].tags.length; j++) {
+            for (j = 0; j < itemsToDisplay[i].tags[0].length; j++) {
                 blogCombined += `
-                <li>${itemsToDisplay[i].tags[j]}</li>
+                <li>${itemsToDisplay[i].tags[0][j]}</li>
                 `
             }
             blogCombined += `
                 </ul>
-                <p>${itemsToDisplay[i].published}</p>
                 </article>`
             }
             blogDisplayEl.innerHTML += blogCombined;

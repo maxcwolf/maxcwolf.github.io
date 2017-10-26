@@ -25,9 +25,10 @@ const articleIdGenerator = blogIdGenerator(lastId.id);
 
 
 // Factory function that returns a blog article object
-const blogArticleFactory = function (title, body, ...tags) {    
+const blogArticleFactory = function (author, title, body, ...tags) {    
     return Object.create(null, {
         "id": { value: articleIdGenerator.next().value, enumerable: true },
+        "author": { value: author, enumerable: true},
         "title": { value: title, enumerable: true },
         "body": { value: body, enumerable: true },
         "tags": { value: tags, enumerable: true },
@@ -56,9 +57,10 @@ const blogArticleFactory = function (title, body, ...tags) {
 //create function that creates a new article object using the articlefactory and stores it in a newArticle variable...
 function storeNewBlog() {
     const newArticle = blogArticleFactory(
+        document.getElementById('authorID').value,
         document.getElementById('titleID').value,
         document.getElementById('blogID').value,
-        document.getElementById('tagsID').value
+        document.getElementById('tagsID').value.split(', ')
     )
     // ...adds new article to array
     BlogDatabase.articles.push(newArticle);
