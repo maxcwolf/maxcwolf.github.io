@@ -1,7 +1,9 @@
 //Parse blogs string from local storage back to an array
 const storedBlogs = JSON.parse(localStorage.getItem('BlogDatabase'));
 
-const totalItems = storedBlogs.articles.length;
+let storedBlogsArticles = storedBlogs.articles;
+
+const totalItems = storedBlogsArticles.length;
 const itemsPerPage = 5;
 const numberOfPages = Math.ceil(totalItems / itemsPerPage);
 const paginationEl = document.getElementById("paginator");
@@ -23,18 +25,25 @@ const previousEl = document.getElementById("previous");
 const nextEl = document.getElementById("next");
 
 
+
 //// ********* GIANT FUNCTION ATTACHED TO PAGINATION LINKS ********* ////
-function produceBlog (event) {
+function produceBlog (event, filteredBlogArray, storedBlogsArticles) {
     // Clear the blog posts first before displaying the new ones
+    if(typeof filteredBlogArray === "undefined") {
+        filteredBlogArray = storedBlogsArticles;
+        storedBlogsArticles = null;
+    }
+    
     blogDisplayEl.innerHTML = "";
 
     // stores the displayed blogs
     let blogCombined = '';
 
-    // Convert DOMTokenList to Array
+    // Convert DOMTokenList of classes  to Array
     const classes = event.target.classList;
     const classArray = Array.from(classes);
 
+    console.log(classArray);
     // Find the class we want that match pattern "page-n"
     const targetClass = classArray.find(classs => {
         if (classs.startsWith("page-")) return classs
@@ -75,7 +84,7 @@ function produceBlog (event) {
     }
 
     // Determine which items to display by slicing the array
-    const itemsToDisplay = storedBlogs.articles.slice(
+    const itemsToDisplay = filteredBlogArray.slice(
         (pageNumber - 1) * itemsPerPage, 
         pageNumber * itemsPerPage
     )
@@ -109,7 +118,7 @@ function produceBlog (event) {
 
 
 // Get the array of pagination anchor tags we added to the DOM
-const blogLinks = document.getElementsByClassName("blogPage")
+const blogLinks = document.getElementsByClassName("blogPage");
 
 // Add event listeners to each <a> element in the pagination
 for (let j = 0; j < blogLinks.length; j++) {
@@ -127,6 +136,26 @@ produceBlog({
 previousEl.addEventListener("click", produceBlog);
 nextEl.addEventListener("click", produceBlog);
 
+
+
+// //get text from search 
+// const searchEl = document.getElementById('search__id');
+
+// //get search button element
+// const searchButtEl = document.getElementById('button__search');
+
+// //search function
+// function searchDatabase() {
+//     return storedBlogs.articles.filter(function(obj) {
+//       return Object.keys(obj).some(function() {
+//         return obj['body'].includes(searchEl.value);
+//       })
+//     });
+//   }
+
+
+// //add event listener to search button
+// searchButtEl.addEventListener('click', searchDatabase);
 
 
 
