@@ -10,20 +10,22 @@ document.getElementById("button__search").addEventListener("click", event => {
         if (searchQuery.length >= 3) {
 
             let filteredBlogArray = storedBlogs.articles.filter (blog => {
-                return blog.title.toLowerCase().includes(searchQuery) || blog.body.toLowerCase().includes(searchQuery)
+                return blog.title.toLowerCase().includes(searchQuery) || blog.body.toLowerCase().includes(searchQuery);
             })
             
+            load(filteredBlogArray);
             console.log(filteredBlogArray);
                         
             if (filteredBlogArray.length === 0) {
-                document.getElementById("blogs").innerHTML = "No Results"
-            } else {
-                produceBlog(event)
+                document.getElementById("blogs").innerHTML = "No Results";
+            // } else {
+            //     load();
             }
             
-        } else {
-            produceBlog(event, filteredBlogArray.articles)
+        // } else {
+        //     load();
         }
 
 })
 
+// document.getElementById("button__search").addEventListener("click", load); 
