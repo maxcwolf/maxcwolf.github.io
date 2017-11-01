@@ -7,8 +7,8 @@ const blogDisplayEl = document.getElementById("blogs");
 let storedBlogsArticles = storedBlogs.articles;
 
 
-let list = new Array();
-let pageList = new Array();
+let list = [];
+let pageList = [];
 let currentPage = 1;
 let numberPerPage = 5;
 let numberOfPages = 0;
@@ -79,9 +79,9 @@ function lastPage() {
 
     
 function drawList() {
-    document.getElementById("blogs").innerHTML = "";
-    for (r = 0; r < pageList.length; r++) {
-        document.getElementById("blogs").innerHTML += pageList[r] + "<br/>";
+    blogDisplayEl.innerHTML = "";
+    for (i = 0; i < pageList.length; i++) {
+        document.getElementById("blogs").innerHTML += pageList[i] + "<br/>";
     }
 }
 
@@ -92,17 +92,11 @@ function check() {
     document.getElementById("last").disabled = currentPage == numberOfPages ? true : false;
 }
 //
-function load(searched) {
-    console.log(searched);
-    if(searched.bubbles === false) {
-        makeList(storedBlogsArticles);
-        loadList();
-    } else {
-        blogsCombined = [];
+function paginate(articleArray) {
         list = [];
-        makeList(searched);
+        makeList(articleArray);
         loadList();
-    }
+
 }
     
-window.onload = load;
+paginate(storedBlogsArticles);
