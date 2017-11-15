@@ -23,38 +23,14 @@
             <label for="search">Search blog posts: </label>
             <input type="search" id="search__id" name="searchName">
         </div>
-        <div class="button">
+        <!-- <div class="button">
             <button id='button__search' type="submit">Search</button>
-        </div>
+        </div> -->
 
         <section id=blogs>
 
 
         </section>
-
-        <!-- <form id='blogForm'>
-            <h2>Make a Blog Post</h2>
-            <div>
-                <label for="title">Author: </label>
-                <input type="text" id="authorID" name="authorName">
-            </div>
-            <div>
-                <label for="title">Title: </label>
-                <input type="text" id="titleID" name="titleName">
-            </div>
-            <div>
-                <label for="tags">Tag your blog:</label>
-                <input type-"text" id="tagsID" name="tagsName">
-            </div>
-            <div>
-                <label for="blog">Write your blog:</label>
-                <textarea id="blogID" name="blogName"></textarea>
-            </div>
-             
-        </form>
-                <div class="button">
-                    <button id='submitButt' type="submit">Post your blog article</button>
-                </div> -->
 
         <nav id='paginator'>
             <input type="button" id="first" onclick="firstPage()" value="<<" />
@@ -64,7 +40,8 @@
         </nav>
 
         <footer>
-            <a href='/admin/blog.html'>Admin Page</a>"
+            <div>Admin access password: (it's 'plumbus') <input id='password' type='password'/></div>
+            <a href='/admin/blog.html'onclick="javascript:return validatePass()"> Admin Only</a>
         </footer>
 
 
@@ -72,7 +49,8 @@
         <script src="/nav/scripts/nav-controller.js"></script>
         <!-- <script src='/blog/scripts/blog-factory.js'></script> -->
         <script src="/blog/scripts/pagination.js"></script>
-        <script src='/blog/scripts/search.js'></script>        
+        <script src='/blog/scripts/search.js'></script>
+        <script src='/blog/scripts/password.js'></script>
         <!-- <script src='/blog/scripts/blog-controller.js'></script> -->
 
     </body>

@@ -7,7 +7,9 @@ const BlogDatabase = JSON.parse(
 BlogDatabase.articles = BlogDatabase.articles || [];
 
 // Flip the order of articles contained in the blog database (descending order)
-BlogDatabase.articles.sort((previous, next) => next.id - previous.id);
+function sortArticles() {
+    BlogDatabase.articles.sort((previous, next) => next.id - previous.id);
+}
 
 // ID GENERATOR
 const blogIdGenerator = function* (last) {
@@ -25,9 +27,9 @@ const articleIdGenerator = blogIdGenerator(lastId.id);
 
 
 // Factory function that returns a blog article object
-const blogArticleFactory = function (author, title, body, ...tags) {    
+const blogArticleFactory = function (id, author, title, body, ...tags) {    
     return Object.create(null, {
-        "id": { value: articleIdGenerator.next().value, enumerable: true },
+        "id": { value: id || articleIdGenerator.next().value, enumerable: true },
         "author": { value: author, enumerable: true},
         "title": { value: title, enumerable: true },
         "body": { value: body, enumerable: true },
@@ -71,7 +73,7 @@ function storeNewBlog() {
     //serialize and store database
     localStorage.setItem("BlogDatabase", JSON.stringify(BlogDatabase));
 
-    //reload the page so that the newly entered data is displayed on the page (may not work properly when utilizing pagination)
+    //reload the page so that the newly entered data is displayed on the page
     location.reload();
 }
 

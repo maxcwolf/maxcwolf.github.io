@@ -14,31 +14,29 @@ let numberPerPage = 5;
 let numberOfPages = 0;
 
 let blogCombined = [];
-
-
+//making edit functionality not work at default
+let editMode = false;
 //pass in a parameter 'articles' to allow the search results array can be passed into 
 function makeList(articles) {
     for (let i = 0; i < articles.length; i++) {
-
-            blogCombined = `
-                <article class='blogPost' id='blog'${articles[i].id}>
-                    <h2>${articles[i].id}.  ${articles[i].title}</h2>
-                    <p>By: ${articles[i].author}  |  Published on: ${articles[i].published.slice(0, -18)}</p>
-                    <p>${articles[i].body}</p>
-                    <ul class='blogPost__tags'>Tags: `
-            //loop to include varying number of tags to each post
-            for (j = 0; j < articles[i].tags[0].length; j++) {
-                blogCombined += `
-                <li>${articles[i].tags[0][j]}</li>
-                `
-            }
+        blogCombined = `
+            <article class='blogPost' id='blog'${articles[i].id}>
+                <h2>${articles[i].id}.  ${articles[i].title}</h2>
+                <p>By: ${articles[i].author}  |  Published on: ${articles[i].published.slice(0, -18)}</p>
+                <p>${articles[i].body}</p>
+                <ul class='blogPost__tags'>Tags: `
+        //loop to include varying number of tags to each post
+        for (j = 0; j < articles[i].tags.length; j++) {
             blogCombined += `
-                </ul>
-                </article>`
+            <li>${articles[i].tags[0][j]}</li>`
+        }
+        blogCombined += `
+            </ul>
+            </article>`
 
-            list.push(blogCombined);
-            }
-            //pushes the above text into the array 'list'
+        list.push(blogCombined);
+        }
+        //pushes the above text into the array 'list'
 }
 console.log(list);
 
@@ -91,7 +89,7 @@ function check() {
     document.getElementById("first").disabled = currentPage == 1 ? true : false;
     document.getElementById("last").disabled = currentPage == numberOfPages ? true : false;
 }
-//
+
 function paginate(articleArray) {
         list = [];
         makeList(articleArray);
@@ -100,3 +98,5 @@ function paginate(articleArray) {
 }
     
 paginate(storedBlogsArticles);
+
+console.log(storedBlogs);
