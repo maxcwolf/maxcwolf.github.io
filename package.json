@@ -1,32 +1,21 @@
 {
-  "name": "personal-site",
+  "name": "",
   "version": "1.0.0",
-  "description": "Max Wolf's Personal Site for NSS",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "eslint-config-google": "^0.9.1",
-    "grunt": "^1.0.1",
-    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
-    "grunt-contrib-watch": "^1.0.0",
-    "gruntify-eslint": "^4.0.0"
-  },
+  "description": "",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maxcwolf/maxcwolf.github.io.git"
-  },
-  "keywords": [
-    "personal",
-    "site",
-    "nss"
-  ],
-  "author": "Max Wolf <maxcharleswolf@gmail.com>",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/maxcwolf/maxcwolf.github.io/issues"
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-plugin-import": "^2.8.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.1.0"
   },
-  "homepage": "https://github.com/maxcwolf/maxcwolf.github.io#readme"
+  "dependencies": {}
 }
