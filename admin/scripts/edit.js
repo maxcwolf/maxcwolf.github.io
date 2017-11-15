@@ -56,23 +56,3 @@
             }
         )
     }
-
-    // // When user clicks on any edit hyperlink
-    // document.getElementById("blogs").addEventListener(
-    //     "click", event => {
-
-    //         if (event.target.id.startsWith("blogEdit_")) {
-    //             // Which article did user click on?
-    //             currentArticle = storedBlogs.articles.find(
-    //                 a => a.id === parseInt(event.target.id.split("_")[1])
-    //             )
-    //             console.log(storedBlogs.articles);
-    //             console.log(currentArticle.title);
-    //             // Put values in the article form
-    //             document.getElementById("titleID").value = currentArticle.title;
-    //             document.getElementById("blogID").value = currentArticle.body;
-
-    //             editMode = true
-    //         }
-    //     }
-    // )
