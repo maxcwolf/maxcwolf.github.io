@@ -1,4 +1,9 @@
 
+/* to show use remove.classList on the button function for the nav bar */
+.hidden {
+    display: none
+}
+
 .title  {
     font-family: 'Josefin Slab', serif;
     color: whitesmoke;

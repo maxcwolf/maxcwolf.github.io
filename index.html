@@ -1,5 +1,4 @@
 
-
 <html>
     <head>
         <title>Max Wolf's Personal Site</title>
@@ -20,8 +19,17 @@
             </ul>
         </nav>
 
-        <section class="landingHTML"></section>
+        <section id="home" class='mainSection'></section>
+
+        <section id='bio' class='mainSection hidden'></section>        
+
+        <section id='resume' class='mainSection hidden'></section>  
+
+        <section id='blog' class='mainSection hidden'></section>
+
+        <section id='admin' class='mainSection hidden'></section>
         
+
         <section id="contact" class="contact">
             <h3>Contact</h3>
                 <ul class="contactList">
@@ -34,6 +42,11 @@
 
         </footer>
 
-        <script src="./scripts/main.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous">
+        </script>
+        <script src="./build/bundle.js"></script>
     </body>
-</html><!doctype html> 
+</html>

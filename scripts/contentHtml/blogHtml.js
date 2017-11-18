@@ -1,7 +1,7 @@
 const blogHtml = {
     'id': {
         enumerable: true,
-        value: 'blogHTML'
+        value: 'blog'
     },
     'html': {
         enumerable: true,        
@@ -9,11 +9,11 @@ const blogHtml = {
         <label for="search">Search blog posts: </label>
         <input type="search" id="search__id" name="searchName">
     </div>
-    <!-- <div class="button">
+    <div class="button">
         <button id='button__search' type="submit">Search</button>
-    </div> -->
+    </div>
 
-    <section id=blogs>
+    <section id="blog_posts">
 
 
     </section>
@@ -26,8 +26,9 @@ const blogHtml = {
     </nav>
 
     <footer>
-        <div>Admin access password: (it's 'plumbus') <input id='password' type='password'/></div>
-        <a href='/admin/blog.html'onclick="javascript:return validatePass()"> Admin Only</a>
+        <a href="#" id="blog_link-admin">Admin</a>
     </footer>`
     }
 }
+
+module.exports = blogHtml

@@ -1,11 +1,11 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
-    pkg: grunt.file.readJSON("package.json"),
+    pkg: grunt.file.readJSON('package.json'),
     watch: {
       scripts: {
-        files: ["**/scripts/**/*.js", "./index.html", "./styles/styles.css","!node_modules/**/*.js"],
-        tasks: ["eslint", "browserify"],
+         files: ['**/scripts/**/*.js', './index.html', './styles/styles.css', '!node_modules/**/*.js'],
+        tasks: ['eslint', 'browserify'],
         options: {
           spawn: false,
         },
@@ -14,7 +14,7 @@ module.exports = function (grunt) {
     browserify: {
       dist: {
         files: {
-          "./build/bundle.js": ["./scripts/main.js"],
+          './build/bundle.js': ['./scripts/main.js'],
         },
       },
     },
@@ -25,25 +25,25 @@ module.exports = function (grunt) {
           build: {
               files: [{
                   expand: true,
-                  cwd: "build",
-                  src: "*.js",
-                  dest: "build",
-                  ext: ".min.js"
-              }]
+                  cwd: 'build',
+                  src: '*.js',
+                  dest: 'build',
+                  ext: '.min.js',
+              }],
           },
       },
     eslint: {
       src: [
-        "**/scripts/**/*.js",
-        "!node_modules/**/*.js",
+        '**/scripts/**/*.js',
+        '!node_modules/**/*.js',
       ],
     },
   });
  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-contrib-uglify");
-  grunt.loadNpmTasks("grunt-eslint");
-  grunt.loadNpmTasks("grunt-browserify");
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-eslint');
+  grunt.loadNpmTasks('grunt-browserify');
  // Default task(s).
-  grunt.registerTask("default", ["eslint", "browserify", "uglify", "watch"]);
+  grunt.registerTask('default', ['eslint', 'browserify', 'uglify', 'watch']);
 };
