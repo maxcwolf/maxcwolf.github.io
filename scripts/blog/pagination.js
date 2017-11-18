@@ -51,7 +51,7 @@ function paginate(articleArray) {
 
     })
     
-        
+    //***NEED TO PASS IN DISPLAY ELEMENT TO MAKE PAGINATION UNIVERSAL***//    
     function drawList() {
         blogDisplayEl.innerHTML = "";
         for (i = 0; i < pageList.length; i++) {
@@ -67,7 +67,7 @@ function paginate(articleArray) {
         document.getElementById("last").disabled = currentPage == numberOfPages ? true : false;
     }
 
-    // list = [];
+    //runs the writeArticles function which takes the blank list array and populates it with an array of HTML strings to be populated into the DOM
     writeArticles(articleArray, list);
     loadList();
 
