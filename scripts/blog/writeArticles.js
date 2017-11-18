@@ -1,4 +1,4 @@
-function writeArticles(articles, list) {
+function writeArticles(articles, list) {//the blank list array is passed in here and populated at the end of this function which is passed out into the pagination function
     // let list = [];    
     for (let i = 0; i < articles.length; i++) {
         blogCombined = `
@@ -15,10 +15,9 @@ function writeArticles(articles, list) {
         blogCombined += `
             </ul>
             </article>`
-
+        //this is where the list is created and passed to the parent paginate function
         list.push(blogCombined);
         }
-        //pushes the above text into the array 'list'
 }
 
 module.exports = writeArticles

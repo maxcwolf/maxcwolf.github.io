@@ -19,10 +19,10 @@ const blogHtml = {
     </section>
 
     <nav id='paginator'>
-        <input type="button" id="first" onclick="firstPage()" value="<<" />
-        <input type="button" id="previous" onclick="previousPage()" value="<" />
-        <input type="button" id="next" onclick="nextPage()" value=">" />
-        <input type="button" id="last" onclick="lastPage()" value=">>" />
+        <input type="button" id="first" value="<<" />
+        <input type="button" id="previous" value="<" />
+        <input type="button" id="next" value=">" />
+        <input type="button" id="last" value=">>" />
     </nav>
 
     <footer>

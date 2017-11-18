@@ -11,12 +11,10 @@ function paginate(articleArray) {
     let numberPerPage = 5;
     let numberOfPages = 0;
     
-    let blogCombined = [];
     //making edit functionality not work at default
     let editMode = false;
     //pass in a parameter 'articles' to allow the search results array can be passed into 
         
-    numberOfPages = getNumberOfPages();
     
     function getNumberOfPages() {
         return Math.ceil(list.length / numberPerPage);
@@ -25,31 +23,33 @@ function paginate(articleArray) {
     function loadList() {
         let begin = ((currentPage - 1) * numberPerPage);
         let end = begin + numberPerPage;
-    
+        
         pageList = list.slice(begin, end);
         drawList();
         check();
     }
     
-    function nextPage() {
-        currentPage += 1;
-        loadList();
-    }
+    //maybe turn these functions into addevent listeners that are added when the funtion runs
     
-    function previousPage() {
-        currentPage -= 1;
-        loadList();
-    }
-    
-    function firstPage() {
-        currentPage = 1;
-        loadList();
-    }
-    
-    function lastPage() {
-        currentPage = numberOfPages;
-        loadList();
-    }
+    document.getElementById("paginator").addEventListener("click", event => {
+        //getNumberOfPages need to run here or else the number of pages is still equal to 0 when the disabling of buttons is calculated
+        numberOfPages = getNumberOfPages();
+        //depending on which button is clicked, 
+        if (event.target.id === "next") {
+                currentPage += 1;
+                loadList();
+        } else if (event.target.id === "previous") {
+                currentPage -= 1;
+                loadList();
+        } else if (event.target.id === "first"){
+                currentPage = 1;
+                loadList();
+        } else if (event.target.id === "last") {
+                currentPage = numberOfPages;
+                loadList();
+        }
+
+    })
     
         
     function drawList() {
@@ -59,6 +59,7 @@ function paginate(articleArray) {
         }
     }
     
+    //logic to disable page buttons depending on which page you are currently on
     function check() {
         document.getElementById("next").disabled = currentPage == numberOfPages ? true : false;
         document.getElementById("previous").disabled = currentPage == 1 ? true : false;
