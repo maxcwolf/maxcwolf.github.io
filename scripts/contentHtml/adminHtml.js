@@ -31,7 +31,7 @@ const adminHtml = {
         </div>
 
         <div id='articleList'>
-            <h3>Edit your articles:</h3>
+            <h2>Your Articles</h2>
 
         </div>`
     }

@@ -10,6 +10,8 @@ function writeArticles(articles, list) {//the blank list array is passed in here
         article.tags.forEach(tag => {
             blogCombined += `
             <li>${tag}</li>`
+//ERROR? in the debugger tags is seen as an array with multiple values, however when looped
+//       thru, it only writes one long single list item?!            
         })
         blogCombined += `
             </ul>

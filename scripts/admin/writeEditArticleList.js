@@ -1,4 +1,4 @@
-const writeEditArticleTitles = () => {
+const writeEditArticleList = () => {
     let articleTitleList = "";
 
     Database = db.load()
@@ -18,7 +18,7 @@ const writeEditArticleTitles = () => {
     )
 
     // Add to DOM
-    document.getElementById("articleList").innerHTML = articleTitleList
+    document.getElementById("articleList").innerHTML += articleTitleList
 }
 
-module.exports = writeEditArticleTitles
+module.exports = writeEditArticleList

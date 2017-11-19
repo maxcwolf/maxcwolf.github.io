@@ -1,11 +1,9 @@
 const basicHtml = require('./contentHtml/basicHtml')
 const navDomWriter = require('./nav/navDomWriter')
 const initResumeDomWriter = require('./resume/resumeController')
-const addAdminListener = require('./blog/blogEventListeners')
-const adminEditListener = require('./admin/edit')
-// const adminSubmitListener = require('./admin/adminEventListeners')
-// const writeStoredBlogs = require('./blog/blogController')
-const writeEditArticleTitles = require('./admin/writeEditArticleTitles')
+const blogListeners = require('./blog/blogEventListeners')
+const adminListeners = require('./admin/adminEventListeners')
+const writeEditArticleList = require('./admin/writeEditArticleList')
 const searchBlogs = require('./blog/search')
 const db = require('./Database')
 
@@ -16,12 +14,10 @@ const populateDOM = domEl => {
     })
     //** each function that populated the dom elements of each section will go here **//
     navDomWriter()//call the navDomWriter function to write the navbar to the DOM
-    addAdminListener() //adds listener to the Admin button on the blog page
-    adminEditListener(db)
-    // adminSubmitListener(db) //adds listener to the submit button on the admin page
-    // writeStoredBlogs()
+    blogListeners() //adds listener to the Admin button on the blog page
+    adminListeners(db)
     searchBlogs() //adds the search blogs functionality
-    writeEditArticleTitles() //writes the list of article titles to edit on the admin page
+    writeEditArticleList() //writes the list of article titles to edit on the admin page
     initResumeDomWriter()
 }
 

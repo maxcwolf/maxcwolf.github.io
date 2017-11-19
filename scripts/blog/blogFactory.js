@@ -28,27 +28,7 @@ const blogArticleFactory = function (id, author, title, body, ...tags) {
     })
     
 }
-// const blogArticleFactory = (id, author, title, body, ...tags) => {
-//     const Database = db.load();//use load method of database object to get local storage
-//     Database.blogs = Database.blogs || {};//if Databse.blogs doesnt exist, set to object
-//     Database.blogs.articles = Database.blogs.articles || [];//if Database.blogs.articles doesn't exist, set to empty array
-//     if (Database.blogs.articles.length === 0) {articleIdGenerator = idGenerator()}//if there are no blogs yet, use idGenerator normally
-//     else {//if blog articles array exists in storage....
-//         Database.blogs.articles.sort((p,n) => n.id - p.id);//..sort users array to have highest id number at index 0
-//         articleIdGenerator = idGenerator(Database.blogs.articles[0].id);//set instance of id generator to be passed highest id number for it's starting number
-//     }
-//     return Object.create(null, {
-//         "id": {
-//             value:(id === null) ? articleIdGenerator.next().value : id,
-//             enumerable: true
-//         },
-//         "author": { value: author, enumerable: true},
-//         "title": { value: title, enumerable: true },
-//         "body": { value: body, enumerable: true },
-//         "tags": { value: tags, enumerable: true },
-//         "published": { value: Date(), enumerable: true }
-//     })
-// }
+
 module.exports = blogArticleFactory
 
 // //********* ARCHIVE OF OLD BLOG ARTICLES TO ENTER LATER *******//

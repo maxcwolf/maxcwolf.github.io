@@ -3,31 +3,59 @@
 body {
     margin: 0;
     padding:0;
+    box-sizing: border-box;
 }
 /* to show use remove.classList on the button function for the nav bar */
 .hidden {
     display: none
 }
 
-/* This adds seperators between each menu item, but they are not centered properly */
-/* nav li + li:before{
-    content: " | ";
-    padding: 0 10px; */
+/* FONT FOR ALL MAINSECTION TEXT */
+.mainSection  {
+    font-family: 'Nunito', sans-serif;
+    margin:0;
 }
 
-/******  selector pseudo classes (link styles when clicked/not clicked/hovering) */
+/* HOME PAGE */
+#home-content {
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
 
+#home-content p {
+    font-size: 18px;
+    margin-right: 5%
+}
 
 
 #wolfimg {
     border-radius: 50%;
-    display: inline-block;
-    margin: auto;
+    margin: 0;
     width: 30%;
 }
 
-.mainSection  {
-    font-family: 'Nunito', sans-serif;
+/* TEXTBOXES IN ADMIN */
+input[type=text] {
+    padding: 0;
+    height: 20px;
+    position: relative;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: white;
+    font-size: 16px;
+}
+textarea {
+    width: 580px;
+    height: 140px;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: white;
+    font-size: 16px;
 }
 
 /* HEADER */

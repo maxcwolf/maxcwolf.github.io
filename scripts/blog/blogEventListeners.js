@@ -1,5 +1,6 @@
 
-function addAdminListener () {
+//Adds event listener to the admin button on the blog page which brings you to the admin page
+function blogListeners () {
     document.getElementById("blog_link-admin").addEventListener("click", event => {
         const sectionEl = document.getElementById("admin")
         
@@ -16,4 +17,4 @@ function addAdminListener () {
     })
 }
 
-module.exports = addAdminListener
+module.exports = blogListeners

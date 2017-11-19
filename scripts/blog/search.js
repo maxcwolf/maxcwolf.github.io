@@ -34,5 +34,3 @@ function searchBlogs() {
 }
 
 module.exports = searchBlogs
-
-// document.getElementById("button__search").addEventListener("click", paginate); 
