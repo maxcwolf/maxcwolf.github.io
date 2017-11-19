@@ -11,8 +11,8 @@ function paginate(articleArray) {
     let numberPerPage = 5;
     let numberOfPages = 0;
     
-    //making edit functionality not work at default
-    let editMode = false;
+    // //making edit functionality not work at default
+    // let editMode = false;
     //pass in a parameter 'articles' to allow the search results array can be passed into 
         
     

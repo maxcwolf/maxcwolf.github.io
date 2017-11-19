@@ -1,33 +1,28 @@
+const blogArticleFactory = require('../blog/blogFactory')
+const writeEditArticleTitles = require('./writeEditArticleTitles')
+const paginate = require('../blog/pagination')
+const db = require("../Database")
+
     
+// When user clicks on anything in the Admin page hyperlink
+function adminEditListener() {
+    
+    //set edit mode and current article within the scoope of this function
     let editMode = false
     let currentArticle = null
+    const Database = db.load()
+
+    Database.blogs = Database.blogs || {}
     
-    const listArticleTitles = () => {
-        let articleTitleList = "";
+    // Create articles key if it doesn't exist
+    Database.blogs.articles = Database.blogs.articles || [];
 
-        // Build title + edit hyperlink for each article
-        BlogDatabase.articles.forEach(
-            article => {
-                articleTitleList += `
-                    <article id="article_${article.id}" class="article--tiny">
-                        <span class="article__title">${article.title}</span>
-                        <a href="#" class="article__link" id="articleEdit_${article.id}">Edit</a>
-                    </article>
-                `
-            }
-        )
-
-        // Add to DOM
-        document.getElementById("articleList").innerHTML = articleTitleList
-    }
-
-    // When user clicks on any edit hyperlink
-    document.getElementById("articleList").addEventListener(
+    document.getElementById("admin").addEventListener(
         "click", e => {
-
+//POPULATE THE FORM WITH EDITABLE ARTICLE
             if (e.target.id.startsWith("articleEdit_")) {
                 // Which article did user click on?
-                currentArticle = BlogDatabase.articles.find(
+                currentArticle = Database.blogs.articles.find(
                     a => a.id === parseInt(e.target.id.split("_")[1])
                 )
 
@@ -40,19 +35,87 @@
 
                 editMode = true
             }
-        }
-    )
+//SAVE FUNCTIONALITY
+            else if (e.target.id === 'submitButt' && editMode === false) {
+                console.log('EDIT MODE = FALSE')
+                const newArticle = blogArticleFactory(
+                    null,
+                    document.getElementById('authorID').value,
+                    document.getElementById('titleID').value,
+                    document.getElementById('blogID').value,
+                    document.getElementById('tagsID').value.split(', ')
+                )
+                
+                // ...adds new article to array
+                Database.blogs.articles.push(newArticle);
+                
+                // Flip the order of articles contained in the blog database (descending order)
+                Database.blogs.articles.sort((previous, next) => next.id - previous.id);
+                
+                //serialize and store database
+                db.save(Database)
 
-    listArticleTitles()
+                //reset the form to blank
+                document.forms["blogForm"].reset();                
 
+                //refresh the page with the new article title in the edit list
+                writeEditArticleTitles()
 
-    if (editMode = true) {
-        document.getElementById('submitButt').addEventListener(
-            'click', e => {
-                currentArticle.title = document.getElementById("titleID").value;
-                currentArticle.body = document.getElementById("blogID").value;
-                currentArticle.author = document.getElementById("authorID").value;
-                currentArticle.tags = document.getElementById("tagsID").value;
+                //refresh the blogs page with the new article
+                paginate(Database.blogs.articles)
             }
-        )
-    }
+
+//EDIT FUNCTIONALITY
+            else if (e.target.id === 'submitButt' && editMode === true) {
+                console.log("EDIT MODE should = TRUE... it is actually", editMode)
+
+                // Find the index of the selected message
+                const articleIndex = Database.blogs.articles.findIndex(
+                    article => article.id === currentArticle.id
+                )
+                // Update the message object at the matching index
+                Database.blogs.articles[articleIndex] = blogArticleFactory(
+                    //insert old messageId
+                    Database.blogs.articles[articleIndex].id,
+                    document.getElementById("authorID").value,
+                    document.getElementById("titleID").value,
+                    document.getElementById("blogID").value,
+                    document.getElementById("tagsID").value.split(', ')
+                )
+
+                editMode = false
+    
+                db.save(Database)
+
+                //reset the form to blank
+                document.forms["blogForm"].reset();
+
+                //refresh the page with the new article title in the edit list
+                writeEditArticleTitles()
+
+                //refresh the blogs page
+                paginate(Database.blogs.articles)
+            }
+//DELETE FUNCTIONALITY
+            if (e.target.id.startsWith("articleDelete_")) {
+                // Which article did user click on?
+                currentArticle = Database.blogs.articles.find(
+                    a => a.id === parseInt(e.target.id.split("_")[1])
+                )
+                const articleIndex = Database.blogs.articles.findIndex(
+                    article => article.id === currentArticle.id
+                )
+                //remove the selected article from the database
+                Database.blogs.articles.splice(articleIndex, 1)
+
+                db.save(Database)
+
+                //refresh the page with the new article title in the edit list
+                writeEditArticleTitles()
+
+                //refresh the blogs page
+                paginate(Database.blogs.articles)
+            }
+    })
+}
+module.exports = adminEditListener

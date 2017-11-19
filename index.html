@@ -1,45 +1,75 @@
-
 <html>
     <head>
         <title>Max Wolf's Personal Site</title>
         <link href=style.css rel=stylesheet>
-        <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara|Josefin+Slab|Leckerli+One" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara|Nunito|Josefin+Slab|Leckerli+One|Mrs+Sheppards" rel="stylesheet">
+        <!-- FONT ICONS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     </head>
 
     <body>
-        <header class="title">
-            <h1 class="mainHeader">Max Wolf</h1>
-            <h2 class="secondaryHeader">The Web Experience</h2>
-            <img id="wolfimg" src='./pics/wolf.jpg' alt=wolf>
-        </header>
+        <div class='content'>
+
+            <header class="header">
+
+                <div class="header-inner">
+                    
+                    <h1 id="header-title">Max Wolf</h1>
+                    <!-- <img id="wolfimg" src='./pics/wolf.jpg' alt=wolf> -->
+                    
+                    <nav>
+                        <ul class="mainNav" id='navBar'>
+                            
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+
+
+            <!-- <section id="landing" class="mainSection"></section> -->
+
+            <section id="home" class='mainSection'></section>
+
+            <section id='bio' class='mainSection hidden'></section>        
+
+            <section id='resume' class='mainSection hidden'></section>  
+
+            <section id='blog' class='mainSection hidden'></section>
+
+            <section id='admin' class='mainSection hidden'></section>
         
-        <nav>
-            <ul class="mainNav" id='navBar'>
+        </div>  
+
+        <footer class="footer">
                 
-            </ul>
-        </nav>
+            <div class="footer-right">
 
-        <section id="home" class='mainSection'></section>
+                <a href="https://www.facebook.com/max.wolf.735944"><i class="fa fa-facebook"></i></a>
+                <a href="http://www.instagram.com/maxicanfood"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/max-wolf-41b3b972/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/maxcwolf"><i class="fa fa-github"></i></a>
 
-        <section id='bio' class='mainSection hidden'></section>        
+            </div>
 
-        <section id='resume' class='mainSection hidden'></section>  
+            <div class="footer-left">
 
-        <section id='blog' class='mainSection hidden'></section>
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    ·
+                    <a href="#">Bio</a>
+                    ·
+                    <a href="#">Resume</a>
+                    ·
+                    <a href="#">Blog</a>
+                    ·
+                    <a href="#">Projects</a>
+                </p>
 
-        <section id='admin' class='mainSection hidden'></section>
-        
-
-        <section id="contact" class="contact">
-            <h3>Contact</h3>
-                <ul class="contactList">
-                    <li><a href="http://www.instagram.com/maxicanfood" ><img class=contactImg id=instagram src="pics/instagram.png" alt="@maxicanfood"></a></li>
-                    <li><a href="https://www.facebook.com/max.wolf.735944"><img class=contactImg id=facebook src="pics/facebook.png" alt="facebook"></a></li>
-                    <li><a href="https://github.com/maxcwolf"><img class=contactImg id=github src="pics/github.png"></a></li>
-                </ul>
-        </section>
-        <footer>
-
+                <p>Max Wolf &copy; 2017</p>
+            </div>
+                
         </footer>
 
         <script
