@@ -10,7 +10,10 @@ const homeHtml = {
         value: ` 
     <article id="home-content">
         <img id="wolfimg" src='./pics/wolf.jpg' alt=wolf>
-        <p>Hi! My name is Max Wolf. I am an aspiring software developer currently enrolled in the Nashville Software School. This is my first attempt at creating a website. I hope you enjoy it!</p>
+        <div>
+            <p class='p1'>Hi! I'm Max Wolf.</p>
+            <p class='p2'>I am an aspiring software developer currently enrolled in the Nashville Software School. This is my first attempt at creating a single page web application. I hope you enjoy it!</p>
+        </div>
     </article>`
     }
 }

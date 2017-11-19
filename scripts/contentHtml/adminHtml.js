@@ -6,34 +6,35 @@ const adminHtml = {
     'html': {
         enumerable: true,        
         value: `
-        <form id='blogForm'>
-            <h2>Make a Blog Post</h2>
-            <div>
-                <label for="title">Author: </label>
-                <input type="text" id="authorID" name="authorName">
-            </div>
-            <div>
-                <label for="title">Title: </label>
-                <input type="text" id="titleID" name="titleName">
-            </div>
-            <div>
-                <label for="tags">Tag your blog:</label>
-                <input type-"text" id="tagsID" name="tagsName">
-            </div>
-            <div>
-                <label for="blog">Write your blog:</label>
-                <textarea id="blogID" name="blogName"></textarea>
-            </div> 
-        </form>
+        <div class='blogForm-container'>
+            <form id='blogForm'>
+                <h2>Make a Blog Post</h2>
+                <fieldset>
+                    <input type="text" id="authorID" name="authorName" placeholder="Your name">
+                </fieldset>
+                <fieldset>
+                    <input type="text" id="titleID" name="titleName" placeholder="Blog title">
+                </fieldset>
+                <fieldset>
+                    <input type="text" id="tagsID" name="tagsName" placeholder="Tag your blog">
+                </fieldset>
+                <fieldset>
+                    <textarea id="blogID" name="blogName" placeholder="Type your blog here..."></textarea>
+                </fieldset> 
+            </form>
 
-        <div class="button">
-            <button id='submitButt' type="submit">Post your blog article</button>
+            <div class="button">
+                <button id='submitButt' type="submit">Post your blog article</button>
+            </div>
         </div>
 
-        <div id='articleList'>
+        <section id='articles'>
             <h2>Your Articles</h2>
+            
+            <div id='articleList'>
 
-        </div>`
+            </div>
+        </section>`
     }
 }
 

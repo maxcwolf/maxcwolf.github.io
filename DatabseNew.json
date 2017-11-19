@@ -1,0 +1,162 @@
+{  
+    "basicHtml":[  
+        {  
+            "id":{  
+                "enumerable":true,
+                "value":"home"
+            },
+            "html":{  
+                "enumerable":true,
+                "value":" \n    <article id=\"home-content\">\n        <img id=\"wolfimg\" src='./pics/wolf.jpg' alt=wolf>\n        <div>\n            <p class='p1'>Hi! I'm Max Wolf.</p>\n            <p class='p2'>I am an aspiring software developer currently enrolled in the Nashville Software School. This is my first attempt at creating a single page web application. I hope you enjoy it!</p>\n        </div>\n    </article>"
+            }
+        },
+        {  
+            "id":{  
+                "enumerable":true,
+                "value":"resume"
+            },
+            "html":{  
+                "enumerable":true,
+                "value":" \n        <section id='resume_resume'>\n            <h1>Resume</h1>\n            <section>\n                <p>Max Charles Wolf</p>\n                <p>4603 Nevada Avenue, Nashville , TN, , 37209</p>\n                <p>(615) 351-1478</p>\n                <p>maxcharleswolf@gmail.com</p>\n            </section>    \n        </section>"
+            }
+        },
+        {  
+            "id":{  
+                "enumerable":true,
+                "value":"blog"
+            },
+            "html":{  
+                "enumerable":true,
+                "value":"<div class=search>\n        <input type=\"search\" id=\"search__id\" name=\"searchName\" placeholder=\"Search blog posts...\">\n    </div>\n\n    <h1 id='blog_title'>The Blog</h1>\n\n    <section id=\"blog_posts\">\n\n\n    </section>\n\n    <nav id='paginator'>\n        <input type=\"button\" id=\"first\" value=\"<<\" />\n        <input type=\"button\" id=\"previous\" value=\"<\" />\n        <input type=\"button\" id=\"next\" value=\">\" />\n        <input type=\"button\" id=\"last\" value=\">>\" />\n    </nav>\n\n    <footer>\n        <a href=\"#\" id=\"blog_link-admin\">Admin</a>\n    </footer>"
+            }
+        },
+        {  
+            "id":{  
+                "enumerable":true,
+                "value":"admin"
+            },
+            "html":{  
+                "enumerable":true,
+                "value":"\n        <div class='blogForm-container'>\n            <form id='blogForm'>\n                <h2>Make a Blog Post</h2>\n                <fieldset>\n                    <input type=\"text\" id=\"authorID\" name=\"authorName\" placeholder=\"Your name\">\n                </fieldset>\n                <fieldset>\n                    <input type=\"text\" id=\"titleID\" name=\"titleName\" placeholder=\"Blog title\">\n                </fieldset>\n                <fieldset>\n                    <input type=\"text\" id=\"tagsID\" name=\"tagsName\" placeholder=\"Tag your blog\">\n                </fieldset>\n                <fieldset>\n                    <textarea id=\"blogID\" name=\"blogName\" placeholder=\"Type your blog here...\"></textarea>\n                </fieldset> \n            </form>\n\n            <div class=\"button\">\n                <button id='submitButt' type=\"submit\">Post your blog article</button>\n            </div>\n        </div>\n\n        <section id='articles'>\n            <h2>Your Articles</h2>\n            \n            <div id='articleList'>\n\n            </div>\n        </section>"
+            }
+        }
+    ],
+    "navBar":[  
+        {  
+            "name":"Home"
+        },
+        {  
+            "name":"Bio"
+        },
+        {  
+            "name":"Resume"
+        },
+        {  
+            "name":"Blog"
+        },
+        {  
+            "name":"Projects"
+        }
+    ],
+    "blogs":{  
+        "articles":[  
+            {  
+                "id":7,
+                "author":"Max Wolf",
+                "title":"How It's Made: Plumbuses",
+                "body":"Today on How They Do It : Plumbuses. Everyone has a plumbus in their home. First they take the dingle bop and they smooth it out with a bunch of schleem. The schleem is then...repurposed for later batches. They take the dingle bop and they push it through the grumbo, where the fleeb is rubbed against it. It's important that the fleeb is rubbed, becasue the fleeb has all the fleeb juice. Then, a schlami shows up, and he rubs it...and spits on it. They cut the fleeb. There's several hizzards in the way. The blamfs rub against the chumbles, and the...plubis, and grumbo are shaved away. That leaves you with...a regular old plumbus.",
+                "tags":[  
+                    [  
+                        "Plumbus",
+                        " Schleem",
+                        " Shlami",
+                        " Fleeb"
+                    ]
+                ],
+                "published":"Sun Nov 19 2017 17:06:02 GMT-0600 (CST)"
+            },
+            {  
+                "id":6,
+                "author":"Max Wolf",
+                "title":"It's Just Two Brothers...",
+                "body":"t's in theaters now! Coming this summer...\nTwo brothers. In a van. And then a meteor hit. And they ran as fast as they could. From giant cat-monsters. And then a giant tornado came. And that's when things got knocked into twelfth gear...\nA Mexican... Armada shows up. With weapons made from to- tomatoes. And you better betch'ur bottom dollar that these two brothers know how to handle business.\nIn! 'Alien... Invasion Tomato Monster Mexican Armada Brothers... Who Are Just Regular Brothers Running... in a Van from an... Asteroid and All Sorts of Things: The Movie'.\nHold on! There's more. Old women are comin'! And they're also in the movie and they're gonna come... and cross... attack... these two brothers. But let's get back to the brothers because they're- they have a strong bond! You don't wanna know about it here, but I'll tell you one thing. The Moon. It comes crashing into Earth! And whaddya do then? It's two brothers and I- and... and they're gonna... it's called 'Two Brothers' ... 'Two Brothers'?... It's just called 'Two Brothers'!",
+                "tags":[  
+                    [  
+                        "Tomato Monster",
+                        " Mexican Armada",
+                        " giant cat-monsters"
+                    ]
+                ],
+                "published":"Sun Nov 19 2017 17:03:13 GMT-0600 (CST)"
+            },
+            {  
+                "id":5,
+                "author":"Max Wolf",
+                "title":"Personal Space",
+                "body":"I'm your host Phillip Jacobs, and let me tell you, I care about my personal space. Whoa, whoa. Hey. Who's around me right now? Who's around me? Now, why don't we step up here and everybody get stepped up and let's get some stepped-up personal space up in this place. Here we go. We get a one, personal space. Two, personal space. Three, stay out of my personal space. Four, keep away from my personal space. Five... Get out of that personal space. Six... Stay away from my personal space. Seven... Keep away from that personal space. Eight, personal space. Nine, personal space. You know, I take personal space pretty seriously.",
+                "tags":[  
+                    [  
+                        "personal space show",
+                        " best show on TV"
+                    ]
+                ],
+                "published":"Sun Nov 19 2017 17:01:17 GMT-0600 (CST)"
+            },
+            {  
+                "id":4,
+                "author":"Max Wolf",
+                "title":"Lil' Bits",
+                "body":"Hey, listen, is your mouth tiny and small? Then why don't you come to lil' bits... Lil' bits! where the food is tiny. It looks like regular food, but really tiny. You can put it in your mouth and eat it. Nothing gets stuck in your lips. It's just tiny and tiny and fits right... fits right in. Lil' bits! We got tiny lasagna, tiny Pizza, tiny pie. Mmm! Little, tiny fried eggs. Oh, shit! We got tiny people. Lil' bits! You hungry? Come on down. Lil' bits. Eat some f@$*in' shit, you f*&#in' stupid bitch... just kidding.\n",
+                "tags":[  
+                    [  
+                        "tiny food",
+                        " resaurants",
+                        " lil bits"
+                    ]
+                ],
+                "published":"Sun Nov 19 2017 16:59:38 GMT-0600 (CST)"
+            },
+            {  
+                "id":3,
+                "author":"Max Wolf",
+                "title":"This JAN-uary: Michael Down Your Vincents",
+                "body":"In a world where there's eight jan Michael Vincents and 16 quadrants, there's only enough time for a jan Michael Vincent to make it to a quadrant. He can't be at two quadrants at once.  Jan Michael Vincents are used up. This jan-uary, it's time to Michael down your Vincents. \"Jan quadrant Vincent 16.\" ",
+                "tags":[  
+                    [  
+                        "Jan Michael Vincent",
+                        " Jan Quadrant Vincent 16"
+                    ]
+                ],
+                "published":"Sun Nov 19 2017 16:56:37 GMT-0600 (CST)"
+            },
+            {  
+                "id":2,
+                "author":"Max",
+                "title":"The Eyehole Man",
+                "body":"I'm the eyehole... Man. I'm the only one that's allowed to have eye holes. Get up on out of here with my eyeholes.\n\nRead more at: http://transcripts.foreverdreaming.org/viewtopic.php?f=364&t=22556",
+                "tags":[  
+                    [  
+                        "Eyeholes",
+                        " Breakfast"
+                    ]
+                ],
+                "published":"Sun Nov 19 2017 16:53:52 GMT-0600 (CST)"
+            },
+            {  
+                "id":1,
+                "author":"Max Wolf",
+                "title":"How It's Made: Plumbuses",
+                "body":"Today on How They Do It : Plumbuses. Everyone has a plumbus in their home. First they take the dingle bop and they smooth it out with a bunch of schleem. The schleem is then...repurposed for later batches. They take the dingle bop and they push it through the grumbo, where the fleeb is rubbed against it. It's important that the fleeb is rubbed, becasue the fleeb has all the fleeb juice. Then, a schlami shows up, and he rubs it...and spits on it. They cut the fleeb. There's several hizzards in the way. The blamfs rub against the chumbles, and the...plubis, and grumbo are shaved away. That leaves you with...a regular old plumbus.",
+                "tags":[  
+                    [  
+                        "plumbus",
+                        " how it's made",
+                        " schleem"
+                    ]
+                ],
+                "published":"Sun Nov 19 2017 16:51:43 GMT-0600 (CST)"
+            }
+        ]
+    }
+}
+

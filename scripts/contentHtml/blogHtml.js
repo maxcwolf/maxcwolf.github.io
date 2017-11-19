@@ -6,12 +6,10 @@ const blogHtml = {
     'html': {
         enumerable: true,        
         value: `<div class=search>
-        <label for="search">Search blog posts: </label>
-        <input type="search" id="search__id" name="searchName">
+        <input type="search" id="search__id" name="searchName" placeholder="Search blog posts...">
     </div>
-    <div class="button">
-        <button id='button__search' type="submit">Search</button>
-    </div>
+
+    <h1 id='blog_title'>The Blog</h1>
 
     <section id="blog_posts">
 

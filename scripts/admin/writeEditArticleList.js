@@ -18,7 +18,7 @@ const writeEditArticleList = () => {
     )
 
     // Add to DOM
-    document.getElementById("articleList").innerHTML += articleTitleList
+    document.getElementById("articleList").innerHTML = articleTitleList
 }
 
 module.exports = writeEditArticleList

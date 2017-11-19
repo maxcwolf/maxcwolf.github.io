@@ -1,0 +1,343 @@
+
+
+body {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* to show use remove.classList on the button function for the nav bar */
+.hidden {
+    display: none
+}
+
+/* FONT FOR ALL MAINSECTION TEXT */
+.mainSection  {
+    font-family: 'Nunito', sans-serif;
+    margin:0;
+}
+
+/* HOME PAGE */
+#home-content {
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+
+#home-content p {
+    font-size: 18px;
+    margin-left: 5%;
+    margin-right: 10%
+}
+
+#home-content .p1 {
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+#wolfimg {
+    border-radius: 50%;
+    margin: 0;
+    width: 30%;
+}
+
+/* BLOG PAGE */
+#blog_title {
+    text-align: center;
+    font:50px 'Josefin Slab', Helvetica, sans-serif;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 20px 0;
+}
+
+.blogPost {
+    /* background-color: rgb(233, 233, 233); */
+    margin: 20px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 1px 3px #5a5a5a;
+    text-align: center;
+}
+
+.blogPost__tags {
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end;
+}
+.blogPost__tags li {
+    list-style: none;
+    border: 1px solid rgba(0,0,0,.15);
+    background-color: #7e7e7e;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.blogPost h2 {
+    font-family: 'Josefin Sans', Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+input[type=search] {
+    width: 40%;
+    margin: 20px;
+    padding: 0;
+    height: 30px;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: white;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Nunito', sans-serif;    
+}
+
+#noResults {
+    font-size: 35px;
+    text-align: center;
+    padding: 45px;
+    font-style: italic;
+
+}
+
+/* TEXTBOXES IN ADMIN */
+.blogForm-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+input[type=text] {
+    padding: 0;
+    height: 20px;
+    position: relative;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: white;
+    font-size: 16px;
+}
+#blogForm {
+    margin-bottom: 0;
+}
+
+#blogForm input[type="text"],
+#blogForm textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-family: 'Nunito', sans-serif;  
+}
+
+textarea {
+    width: 100%;
+    height: 140px;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: white;
+    font-size: 16px;
+}
+
+.blogForm-container button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #929292;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+/* PAGINATOR */
+#paginator {
+    text-align: center;
+}
+/* HEADER */
+.header {
+	background-color: #5a5a5a;
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+	padding: 20px 40px;
+    height: 80px;
+    color: rgb(233, 233, 233);
+	box-sizing: border-box;
+}
+
+.header .header-inner {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+.header .header-inner h1 {
+	float: left;
+	font: normal 45px 'Mrs Sheppards', cursive;;
+	line-height: 40px;
+	margin: 0;
+}
+
+/* The header links */
+.header .header-inner a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header .header-inner nav{
+	font:16px 'Josefin Slab', Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header .header-inner nav li{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	font-size: 20px;
+	opacity: 0.9;
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.header {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header .header-inner h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header .header-inner nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header .header-inner nav lo {
+		font-size: 13px;
+	}
+
+}
+
+
+/* FOOTER */
+.footer{
+	background-color: #5a5a5a;
+	box-shadow: 0 1px 1px 0 rgba(255, 94, 0, 0.87);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px 'Josefin Slab';
+
+	padding: 35px 40px;
+	margin-top: 80px;
+}
+
+.footer .footer-left p{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Footer links */
+
+.footer p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer .footer-right{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+    text-align: center;
+	line-height: 35px;
+	margin-left: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer .footer-left,
+	.footer .footer-right{
+		text-align: center;
+	}
+
+	.footer .footer-right{
+		float: none;
+		margin: 0 auto 20px;
+	}
+
+	.footer .footer-left p.footer-links{
+		line-height: 1.8;
+	}
+}
+
+
+/* STICKY FOOTER */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+}
+
+.content {
+    flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    max-width: 100%;
+    width: 100%;
+}
+
+.footer {
+    flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+}

@@ -21,7 +21,7 @@ function searchBlogs() {
                 paginate(filteredBlogArray);
                             
                 if (filteredBlogArray.length === 0) {
-                    document.getElementById("blog_posts").innerHTML = "<div>No Results</div>";
+                    document.getElementById("blog_posts").innerHTML = "<div id='noResults'>No Results</div>";
                 }    
             //if there are less than 3 characters in the input text box, then display the storedBlogArticles    
             } else {

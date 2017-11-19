@@ -2,16 +2,16 @@ function writeArticles(articles, list) {//the blank list array is passed in here
     articles.forEach(article => {
         blogCombined = `
             <article class='blogPost' id='blog'${article.id}>
-                <h2>${article.id}.  ${article.title}</h2>
-                <p>By: ${article.author}  |  Published on: ${article.published.slice(0, -18)}</p>
+                <h2>${article.title}</h2>
+                <p>Posted by: ${article.author}  |  Published on: ${article.published.slice(0, -18)}</p>
                 <p>${article.body}</p>
-                <ul class='blogPost__tags'>Tags: `
+                <ul class='blogPost__tags'>`
         //loop to include varying number of tags to each post
-        article.tags.forEach(tag => {
-            blogCombined += `
-            <li>${tag}</li>`
-//ERROR? in the debugger tags is seen as an array with multiple values, however when looped
-//       thru, it only writes one long single list item?!            
+        article.tags.forEach(tagArr => {
+            tagArr.forEach(tag => {
+                console.log(tag)
+                blogCombined += `<li>${tag}</li>`
+            })
         })
         blogCombined += `
             </ul>
