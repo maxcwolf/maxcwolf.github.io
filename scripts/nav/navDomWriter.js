@@ -4,8 +4,9 @@ function navDomWriter() {
     //get the navBar element in index.html
     const navEl = document.getElementById("navBar");
 
-    // const navFootEl = document.getElementById("footer-links");
+    // const navFootEl = document.getElementById("footer-navBar");
     
+
     //iterate through nav array and write each nav to the navBar element in the DOM
     navBar.forEach(nav => {
 
@@ -49,9 +50,13 @@ function navDomWriter() {
         
             // adding the finished list items to the navbar element
             navEl.appendChild(newLi);
-
-            // adding the finished list items to the footer nav element
-            // navFootEl.appendChild(newLi);
+// //adds links to footer (removed due to the fact that event listeners are removed when cloned and the section name which is stored on the end of each link's id need to be looped through in the way done above)
+//             //CLONES the newLi which removes the event listeners
+//             const clonedNewEl = newLi.cloneNode(true)
+//             console.log(clonedNewEl)
+//             // debugger
+//             // adding the finished list items to the footer nav element
+//             navFootEl.appendChild(clonedNode)
             
     })
 }

@@ -63,6 +63,10 @@ body {
     text-align: center;
 }
 
+.blogPost__authDate {
+    font: light 20px 'Josefin Sans', Helvetica, sans-serif;
+}
+
 .blogPost__tags {
     display: flex;
     justify-content: space-around;
@@ -271,15 +275,18 @@ textarea {
 	width: 100%;
 	text-align: left;
 	font: normal 16px 'Josefin Slab';
-
 	padding: 35px 40px;
 	margin-top: 80px;
+    /* allows the footer-left to be pusdhed to the bottom-right with the position absolute and the bottom 0 in the css direcly below this */
+    position: relative;
 }
 
 .footer .footer-left p{
 	color:  #8f9296;
-	font-size: 14px;
-	margin: 0;
+	font-size: 16px;
+    margin: 10px;
+    position: absolute; 
+    bottom: 0;
 }
 
 /* Footer links */
