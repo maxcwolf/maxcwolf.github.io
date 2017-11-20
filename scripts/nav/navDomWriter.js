@@ -3,6 +3,8 @@ const navBar = require("./navFactory")
 function navDomWriter() {
     //get the navBar element in index.html
     const navEl = document.getElementById("navBar");
+
+    // const navFootEl = document.getElementById("footer-links");
     
     //iterate through nav array and write each nav to the navBar element in the DOM
     navBar.forEach(nav => {
@@ -47,6 +49,10 @@ function navDomWriter() {
         
             // adding the finished list items to the navbar element
             navEl.appendChild(newLi);
+
+            // adding the finished list items to the footer nav element
+            // navFootEl.appendChild(newLi);
+            
     })
 }
 

@@ -43,7 +43,7 @@ function adminListeners() {
                     document.getElementById('authorID').value,
                     document.getElementById('titleID').value,
                     document.getElementById('blogID').value,
-                    document.getElementById('tagsID').value.split(", ")
+                    document.getElementById('tagsID').value.split(",")
                 )
                 
                 // ...adds new article to array
@@ -80,7 +80,7 @@ function adminListeners() {
                     document.getElementById("authorID").value,
                     document.getElementById("titleID").value,
                     document.getElementById("blogID").value,
-                    document.getElementById("tagsID").value.split(', ')
+                    document.getElementById("tagsID").value.split(',')
                 )
 
                 editMode = false

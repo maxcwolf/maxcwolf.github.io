@@ -9,7 +9,6 @@ function writeArticles(articles, list) {//the blank list array is passed in here
         //loop to include varying number of tags to each post
         article.tags.forEach(tagArr => {
             tagArr.forEach(tag => {
-                console.log(tag)
                 blogCombined += `<li>${tag}</li>`
             })
         })

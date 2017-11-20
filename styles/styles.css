@@ -44,6 +44,7 @@ body {
 }
 
 /* BLOG PAGE */
+
 #blog_title {
     text-align: center;
     font:50px 'Josefin Slab', Helvetica, sans-serif;
@@ -55,9 +56,9 @@ body {
 
 .blogPost {
     /* background-color: rgb(233, 233, 233); */
-    margin: 20px;
+    margin: 40px 45px 0px;
     padding: 15px;
-    position: relative;
+    /* position: relative; */
     box-shadow: 0 1px 3px #5a5a5a;
     text-align: center;
 }
@@ -84,14 +85,14 @@ body {
 
 input[type=search] {
     width: 40%;
-    margin: 20px;
+    margin: 20px 45px;
     padding: 0;
     height: 30px;
     outline: none;
     border: 1px solid #cdcdcd;
     border-color: rgba(0,0,0,.15);
     background-color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
     font-family: 'Nunito', sans-serif;    
 }
@@ -105,12 +106,30 @@ input[type=search] {
 }
 
 /* TEXTBOXES IN ADMIN */
-.blogForm-container {
+.blogForm-container,
+#articles {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
     position: relative;
-  }
+}
+
+#articles {
+    margin-top: 40px;
+}
+
+/* edit and delete text */
+.article__link {
+    text-decoration: none; 
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.article--tiny {
+    margin-bottom: 5px;
+    border-bottom: .5px solid #f0f0f0;
+}
 
 fieldset {
     border: medium none !important;
@@ -189,7 +208,7 @@ textarea {
 
 .header .header-inner h1 {
 	float: left;
-	font: normal 45px 'Mrs Sheppards', cursive;;
+	font: normal 55px 'Mrs Sheppards', cursive;;
 	line-height: 40px;
 	margin: 0;
 }
@@ -289,10 +308,10 @@ textarea {
 .footer .footer-right a{
 	display: inline-block;
 	width: 35px;
-	height: 35px;
+    height: 25px;
+    padding-top: 7px;
 	background-color:  #33383b;
 	border-radius: 2px;
-
 	font-size: 20px;
 	color: #ffffff;
     text-align: center;

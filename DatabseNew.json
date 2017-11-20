@@ -157,6 +157,107 @@
                 "published":"Sun Nov 19 2017 16:51:43 GMT-0600 (CST)"
             }
         ]
+    },
+    "resume": {  
+        "Professional Experience":[  
+            {  
+                "name":"Klein Buendel Inc.",
+                "location":"Denver, CO",
+                "titles":[  
+                    {  
+                        "title":"Data Manager",
+                        "timeFrame":"September 2015 – April 2016",
+                        "duties":[  
+                            "Oversee the data management of thirteen different research projects, simultaneously.",
+                            "Develop and refine data management procedures addressing all facets of company-wide data management.",
+                            "Evaluate processes and technologies to increase productivity and efficiency of data management team.",
+                            "Perform quality control audits to ensure accuracy, completeness, or proper functioning of systems and data."
+                        ]
+                    },
+                    {  
+                        "title":"Data Coordinator",
+                        "timeFrame":"May 2013 – September 2015",
+                        "duties":[  
+                            "Supervise work of data assistant, and developed their understanding of proper data management.",
+                            "Train staff on technical procedures and software usage.",
+                            "Analyze research data using appropriate statistical tools and prepare comprehensive data reports.",
+                            "Design and program surveys and forms for receiving, processing, or tracking data.",
+                            "Prepare appropriate formatting to data sets."
+                        ]
+                    },
+                    {  
+                        "title":"Research Assistant",
+                        "timeFrame":"August 2012 – May 2013",
+                        "duties":[  
+                            "Assist research coordinators and perform data entry work as required for various projects."
+                        ]
+                    },
+                    {  
+                        "title":"Data Collector",
+                        "timeFrame":"May 2012 – August 2012",
+                        "duties":[  
+                            "Observed and recorded shade usage data of people at Denver parks."
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Education":[  
+            {  
+                "name":"Warren Wilson College",
+                "location":"Asheville, NC",
+                "attended":"August 2005 - May 2011",
+                "gpa":"3.84",
+                "graduated":true,
+                "degreeAquired":true,
+                "degrees":[  
+                    {  
+                        "degree":"Anthropology and Sociology",
+                        "concentration":"Global Food Systems",
+                        "dateAquired":"May 2011",
+                        "degreeType":"Bachelor of Arts"
+                    },
+                    {  
+                        "degree":"Environmental Studies",
+                        "concentration":"Sustainable Agriculture",
+                        "dateAquired":"May 2011",
+                        "degreeType":"Bachelor of Arts"
+                    }
+                ]
+            },
+            {  
+                "name":"SUNY New Paltz",
+                "location":"New Paltz, NY",
+                "attended":"August 2007 - January 2008",
+                "gpa":"",
+                "graduated":false,
+                "degreeAquired":false,
+                "degrees":""
+            },
+            {  
+                "name":"Brentwood High School",
+                "location":"Brentwood, TN",
+                "attended":"August 2001 - May 2005",
+                "gpa":"",
+                "graduated":true,
+                "degreeAquired":false,
+                "degrees":""
+            }
+        ],
+        "Skills":[  
+            "Expert in Microsoft Excel, with focus on advanced functions and some VBA.",
+            "Proficient in Microsoft Access.",
+            "Basic understanding of SQL and Microsoft SQL Server.",
+            "Creating advanced questionnaires and forms in various survey creation programs.",
+            "Excellent in assembling computer components, assessing and fixing any hardware issues."
+        ],
+        "Professional Development":[  
+            {  
+                "name":"Certificate in Data Management for Clinical Research",
+                "location":"Coursara/Vanderbilt University",
+                "date":"October 2013"
+            }
+        ]
     }
 }
 
