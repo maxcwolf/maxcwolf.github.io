@@ -44,8 +44,3 @@ module.exports = blogArticleFactory
 //     "Making a this blog page was easy, but adding features to it is becoming extremely difficult!  I hope I can figure out how to add new blog posts using the form at the bottom of the page. I'm almost there, but for some reason the entered data doesnt get properly stored in the local storage. Hopefully I can figure it out when I get into class today.",
 //     'making a blog', 'troubleshooting'
 // )
-
-
-
-
-

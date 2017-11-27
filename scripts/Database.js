@@ -8,5 +8,3 @@ const Database = Object.create(null, {
         }
     }
 })
-
-module.exports = Database

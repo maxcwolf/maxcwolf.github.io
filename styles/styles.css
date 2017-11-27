@@ -21,7 +21,7 @@ body {
     height: 50%;
     display: flex;
     align-items: flex-start;
-    margin: 0;
+    margin: 10% 0 0;
     width: 100%;
 }
 
@@ -32,8 +32,9 @@ body {
 }
 
 #home-content .p1 {
-    font-weight: bold;
     font-style: italic;
+    font: normal 24px 'Josefin Sans', Helvetica, sans-serif;
+    
 }
 
 
@@ -110,6 +111,7 @@ input[type=search] {
 }
 
 /* TEXTBOXES IN ADMIN */
+.contactForm-container,
 .blogForm-container,
 #articles {
     max-width: 600px;
@@ -156,7 +158,8 @@ input[type=text] {
 #blogForm {
     margin-bottom: 0;
 }
-
+#ajax-contact input[type="text"],
+#ajax-contact input[type="email"],
 #blogForm input[type="text"],
 #blogForm textarea {
   width: 100%;
@@ -177,6 +180,7 @@ textarea {
     font-size: 16px;
 }
 
+.contactForm-container button[type="submit"],
 .blogForm-container button[type="submit"] {
     cursor: pointer;
     width: 100%;

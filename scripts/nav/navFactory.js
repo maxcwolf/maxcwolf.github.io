@@ -1,4 +1,4 @@
-const db = require('../Database')
+
 
 //nav bar objects
 const homeNav = {
@@ -21,20 +21,23 @@ const projectsNav = {
     'name' : 'Projects',
 }
 
+const contactNav = {
+    'name' : 'Contact',
+}
 
 //create blank nav bar array
 const navBar = [];
 
 //create array of objects into navBar
-navBar.push(homeNav, bioNav, resumeNav, blogNav, projectsNav);
+navBar.push(homeNav, bioNav, resumeNav, blogNav, projectsNav, contactNav);
 
-//load the database from local storage and store in Database variable
-const Database = db.load()
+// //load the database from local storage and store in Database variable
+// const Database = db.load()
 
-//create a navBar object in the database and populate it with the basicHtml array of objects
-Database.navBar = navBar
+// //create a navBar object in the database and populate it with the basicHtml array of objects
+// Database.navBar = navBar
 
-//push the database back into local storage
-db.save(Database)
+// //push the database back into local storage
+// db.save(Database)
 
 module.exports = navBar

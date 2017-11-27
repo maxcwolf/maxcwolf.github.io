@@ -4,7 +4,7 @@ const blogHtml = {
         value: 'blog'
     },
     'html': {
-        enumerable: true,        
+        enumerable: true,
         value: `<div class=search>
         <input type="search" id="search__id" name="searchName" placeholder="Search blog posts...">
     </div>
@@ -18,7 +18,7 @@ const blogHtml = {
         <div>
             <a href="#" id="blog_link-admin">Admin</a>
         </div>
-        <nav id='paginator'>
+        <nav id='blog_paginator'>
             <input type="button" id="first" value="<<" />
             <input type="button" id="previous" value="<" />
             <input type="button" id="next" value=">" />

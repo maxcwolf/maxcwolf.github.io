@@ -12,6 +12,12 @@ module.exports = function(grunt) {
       },
     },
     browserify: {
+      options: {
+        browserifyOptions: {
+            debug: true,
+            paths: ["./scripts"],
+        }
+      },
       dist: {
         files: {
           './build/bundle.js': ['./scripts/main.js'],

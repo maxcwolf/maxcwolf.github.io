@@ -1,3 +1,12 @@
-const populateDOM = require("./populateDOM")
+const navDomWriter = require('./nav/navDomWriter')
+const blogListeners = require('./blog/blogEventListeners')
+// const articleController = require("./blog/articleController")
+const articleController = require("./blog/articleController")
+const adminController = require("./admin/adminController")
 
-populateDOM() //populating the DOM with the basic HTML templates stored in innerHTML.js
+
+navDomWriter()//call the navDomWriter function to write the navbar to the DOM
+blogListeners() //adds listener to the Admin button on the blog page
+
+articleController.init()
+adminController.init()

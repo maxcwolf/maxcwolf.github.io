@@ -2,10 +2,11 @@
     <head>
         <title>Max Wolf's Personal Site</title>
         <link href="./styles/styles.css" rel=stylesheet>
-        
+
         <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara|Nunito:400,400i,700,700i|Josefin+Slab: 300,400,400i,700,700i|Josefin+Sans:400,400i,700,700i|Leckerli+One|Mrs+Sheppards" rel="stylesheet">
         <!-- FONT ICONS -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
     </head>
 
     <body>
@@ -14,13 +15,13 @@
             <header class="header">
 
                 <div class="header-inner">
-                    
+
                     <h1 id="header-title">Max Wolf</h1>
                     <!-- <img id="wolfimg" src='./pics/wolf.jpg' alt=wolf> -->
-                    
+
                     <nav>
                         <ul class="mainNav" id='navBar'>
-                            
+
                         </ul>
                     </nav>
                 </div>
@@ -30,20 +31,113 @@
 
             <!-- <section id="landing" class="mainSection"></section> -->
 
-            <section id="home" class='mainSection'></section>
+            <section id="home" class='mainSection'>
+                <article id="home-content">
+                    <img id="wolfimg" src='./pics/wolf.jpg' alt=wolf>
+                    <div>
+                        <p class='p1'>Hi! I'm Max Wolf.</p>
+                        <p class='p2'>I am an aspiring software developer currently enrolled in the Nashville Software School. This is my first attempt at creating a single page web application. I hope you enjoy it!</p>
+                    </div>
+                </article>
+            </section>
 
-            <section id='bio' class='mainSection hidden'></section>        
+            <section id='bio' class='mainSection hidden'>
+            </section>
 
-            <section id='resume' class='mainSection hidden'></section>  
+            <section id='resume' class='mainSection hidden'>
+                <section id='resume_resume'>
+                    <h1>Resume</h1>
+                    <section>
+                        <p>Max Charles Wolf</p>
+                        <p>4603 Nevada Avenue, Nashville , TN, , 37209</p>
+                        <p>(615) 351-1478</p>
+                        <p>maxcharleswolf@gmail.com</p>
+                    </section>
+                </section>`
+            </section>
 
-            <section id='blog' class='mainSection hidden'></section>
+            <section id='blog' class='mainSection hidden'>
+                <div class=search>
+                    <input type="search" id="search__id" name="searchName" placeholder="Search blog posts...">
+                </div>
+                <div id='blog_container'>
+                    <h1 id='blog_title'>The Blog</h1>
 
-            <section id='admin' class='mainSection hidden'></section>
-        
-        </div>  
+                    <section id="blog_posts">
+
+
+                    </section>
+                    <div>
+                        <a href="#" id="blog_link-admin">Admin</a>
+                    </div>
+                    <nav id='blog_paginator'>
+                        <input type="button" id="first" value="<<" />
+                        <input type="button" id="previous" value="<" />
+                        <input type="button" id="next" value=">" />
+                        <input type="button" id="last" value=">>" />
+                    </nav>
+                </div>
+            </section>
+
+            <section id='admin' class='mainSection hidden'>
+                <div class='blogForm-container'>
+                    <form id='blogForm'>
+                        <h2>Make a Blog Post</h2>
+                        <fieldset>
+                            <input type="text" id="authorID" name="authorName" placeholder="Your name">
+                        </fieldset>
+                        <fieldset>
+                            <input type="text" id="titleID" name="titleName" placeholder="Blog title">
+                        </fieldset>
+                        <fieldset>
+                            <input type="text" id="tagsID" name="tagsName" placeholder="Tag your blog">
+                        </fieldset>
+                        <fieldset>
+                            <textarea id="blogID" name="blogName" placeholder="Type your blog here..."></textarea>
+                        </fieldset>
+                        <fieldset class="hidden">
+                                <input type="text" id="editID" class="hidden" name="editName">
+                        </fieldset>
+                    </form>
+
+                    <div class="button">
+                        <button id='submitButt' type="submit">Post your blog article</button>
+                    </div>
+                </div>
+
+                <section id='articles'>
+                    <h2>Your Articles</h2>
+
+                    <div id='articleList'>
+
+                    </div>
+                </section>
+            </section>
+
+            <section id='contact' class='mainSection hidden'>
+                <div id="form-messages"></div>
+                <div class='contactForm-container'>
+                    <form id="ajax-contact" method="post" action="mailer.php">
+                        <h2>Send me a message</h2>
+                        <fieldset>
+                            <input type="text" id="name" name="name" placeholder="Your name">
+                        </fieldset>
+                        <fieldset>
+                            <input type="text" id="email" name="email" placeholder="Your email">
+                        </fieldset>
+                        <fieldset>
+                            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <button type="submit" name="send">Send your message</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
 
         <footer class="footer">
-                
+
             <div class="footer-right">
 
                 <a href="https://www.facebook.com/max.wolf.735944"><i class="fa fa-facebook"></i></a>
@@ -69,13 +163,12 @@
 
                 <p>Max Wolf &copy; 2017</p>
             </div>
-                
+
         </footer>
         <script
         src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-        crossorigin="anonymous">
-        </script>
+        crossorigin="anonymous"></script>
         <script src="./build/bundle.js"></script>
     </body>
 </html>
