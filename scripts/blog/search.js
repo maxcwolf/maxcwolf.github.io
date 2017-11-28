@@ -24,7 +24,7 @@ const searchBlogs = Object.create(null, {
                 }
             //if there are less than 3 characters in the input text box, then display the storedBlogArticles
             } else {
-                // let storedBlogArticles =
+            // let storedBlogArticles =
             paginate.itemsToPaginate = articleFactory.cache;
             paginate.start("blog_paginator", "blog_posts", articleWriter.render)
             }

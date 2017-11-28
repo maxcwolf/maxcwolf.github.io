@@ -19,13 +19,11 @@ const adminListeners = () => {
 
         document.getElementById("admin").addEventListener(
             "click", e => {
-    //POPULATE THE FORM WITH EDITABLE ARTICLE
+//POPULATE THE FORM WITH EDITABLE ARTICLE
                 if (e.target.id.startsWith("articleEdit!")) {
                     // Which article did user click on?
 
                     const currentArticle = e.target.id.split("!").pop();
-                    // for (let key in articles) {
-                    //     const currentArticle = articles[key]
 
                         // Put values in the article form
                         document.getElementById("titleID").value = articles[currentArticle].title;
@@ -34,12 +32,9 @@ const adminListeners = () => {
                         document.getElementById("tagsID").value = articles[currentArticle].tags;
                         document.getElementById("editID").value = articles[currentArticle].id; //add hidden value containing the long id of each article for edit functionality
 
-                    // }
-
-
                     editMode = true
                 }
-    //SAVE FUNCTIONALITY
+//SAVE FUNCTIONALITY
                 else if (e.target.id === 'submitButt' && editMode === false) {
                     console.log('EDIT MODE = FALSE')
 
@@ -60,7 +55,6 @@ const adminListeners = () => {
                     articleController.refresh()
 
                     //refresh the blogs page with the new article
-                    // initSearchBlogs()
                     articleController.init()
 
                     // // ...adds new article to array
@@ -69,12 +63,10 @@ const adminListeners = () => {
                     // // Flip the order of articles contained in the blog database (descending order)
                     // articles.sort((previous, next) => next.id - previous.id);
 
-                    // //serialize and store database
-                    // db.save(Database)
 
                 }
 
-    //EDIT FUNCTIONALITY
+//EDIT FUNCTIONALITY
                 else if (e.target.id === 'submitButt' && editMode === true) {
                     console.log("EDIT MODE should = TRUE... it is actually", editMode)
 
@@ -91,7 +83,6 @@ const adminListeners = () => {
 
                     articleFactory.replace(editedArticle.article, editedArticle.id)
 
-                    editMode = false
                     //reset the form to blank
                     document.forms["blogForm"].reset();
 
@@ -99,25 +90,25 @@ const adminListeners = () => {
                     articleController.refresh()
 
                     //refresh the blogs page with the new article
-                    // initSearchBlogs()
                     articleController.init()
 
+                    editMode = false
 
                 }
-    //DELETE FUNCTIONALITY
+//DELETE FUNCTIONALITY
                 if (e.target.id.startsWith("articleDelete!")) {
 
                     // Which article did user click on? > take the id stored in the element id and store it as a variable
                     const articleToDelete = e.target.id.split("!")[1]
 
                     //get the element to remove
-                    const elementToDelete = e.target
+                    // const elementToDelete = e.target
 
                     //remove article from firebase using the object's key (stored as the id in the arrayified object)
                     articleFactory.remove(articleToDelete)
 
                     //remove the article from the article list in the DOM
-//DOESNT WORK                    elementToDelete.remove()
+                    //DOESNT WORK  elementToDelete.remove()
 
                     //refresh the page with the new article title in the edit list
                     articleController.refresh()

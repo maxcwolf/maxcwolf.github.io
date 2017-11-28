@@ -20,14 +20,6 @@ const articleFactory = Object.create(null, {
             })
         }
     },
-    // "single": {
-    //     value: function (id) {
-    //         return $.ajax({
-    //             "url": `${firebaseURL}/${id}/.json`,
-    //             "method": "GET"
-    //         })
-    //     }
-    // },
     "add": {
         value: function (article) {
             return $.ajax({

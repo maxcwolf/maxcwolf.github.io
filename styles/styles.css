@@ -34,7 +34,7 @@ body {
 #home-content .p1 {
     font-style: italic;
     font: normal 24px 'Josefin Sans', Helvetica, sans-serif;
-    
+
 }
 
 
@@ -99,7 +99,7 @@ input[type=search] {
     background-color: white;
     font-size: 16px;
     font-weight: normal;
-    font-family: 'Nunito', sans-serif;    
+    font-family: 'Nunito', sans-serif;
 }
 
 #noResults {
@@ -126,7 +126,7 @@ input[type=search] {
 
 /* edit and delete text */
 .article__link {
-    text-decoration: none; 
+    text-decoration: none;
     font-style: italic;
     font-weight: bold;
     margin-left: 10px;
@@ -167,7 +167,7 @@ input[type=text] {
   background: #FFF;
   margin: 0 0 5px;
   padding: 10px;
-  font-family: 'Nunito', sans-serif;  
+  font-family: 'Nunito', sans-serif;
 }
 
 textarea {
@@ -289,7 +289,7 @@ textarea {
 	color:  #8f9296;
 	font-size: 16px;
     margin: 10px;
-    position: absolute; 
+    position: absolute;
     bottom: 0;
 }
 
@@ -370,4 +370,43 @@ body {
 .footer {
     flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
     padding: 20px;
+}
+
+/* MODAL */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

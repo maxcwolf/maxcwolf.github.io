@@ -21,11 +21,6 @@ const paginate = () => {
                 let outputEl = document.getElementById(outputId);
                 let paginatorEl = document.getElementById(paginatorId)
 
-                // //making edit functionality not work at default
-                // let editMode = false;
-                //pass in a parameter 'articles' to allow the search results array can be passed into
-
-
                 function getNumberOfPages() {
                     return Math.ceil(list.length / numberPerPage);
                 }
@@ -38,8 +33,6 @@ const paginate = () => {
                     drawList();
                     check();
                 }
-
-                //maybe turn these functions into addevent listeners that are added when the funtion runs
 
                 paginatorEl.addEventListener("click", event => {
                     //getNumberOfPages need to run here or else the number of pages is still equal to 0 when the disabling of buttons is calculated
@@ -77,9 +70,9 @@ const paginate = () => {
                     document.getElementById("last").disabled = currentPage == numberOfPages ? true : false;
                 }
 
-                //runs the initWriteArticles function which takes the blank list array and populates it with an array of HTML strings to be populated into the DOM
-                writer(items, list);
-                loadList();
+                //runs writeArticles function which takes the blank list array and populates it with an array of HTML strings to be populated into the DOM
+                writer(items, list); //puts the articles in 'list' array -> passes it to loadlist()
+                loadList(); //
 
             }
         }
