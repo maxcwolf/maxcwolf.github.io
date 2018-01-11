@@ -1,0 +1,190 @@
+{
+    "basicHtml":[
+        {
+            "id":{
+                "enumerable":true,
+                "value":"home"
+            },
+            "html":{
+                "enumerable":true,
+                "value":" \n    <article id=\"home-content\">\n        <img id=\"wolfimg\" src='./pics/wolf.jpg' alt=wolf>\n        <div>\n            <p class='p1'>Hi! I'm Max Wolf.</p>\n            <p class='p2'>I am an aspiring software developer currently enrolled in the Nashville Software School. This is my first attempt at creating a single page web application. I hope you enjoy it!</p>\n        </div>\n    </article>"
+            }
+        },
+        {
+            "id":{
+                "enumerable":true,
+                "value":"resume"
+            },
+            "html":{
+                "enumerable":true,
+                "value":" \n        <section id='resume_resume'>\n            <h1>Resume</h1>\n            <section>\n                <p>Max Charles Wolf</p>\n                <p>4603 Nevada Avenue, Nashville , TN, , 37209</p>\n                <p>(615) 351-1478</p>\n                <p>maxcharleswolf@gmail.com</p>\n            </section>    \n        </section>"
+            }
+        },
+        {
+            "id":{
+                "enumerable":true,
+                "value":"blog"
+            },
+            "html":{
+                "enumerable":true,
+                "value":"<div class=search>\n        <input type=\"search\" id=\"search__id\" name=\"searchName\" placeholder=\"Search blog posts...\">\n    </div>\n\n    <h1 id='blog_title'>The Blog</h1>\n\n    <section id=\"blog_posts\">\n\n\n    </section>\n\n    <nav id='paginator'>\n        <input type=\"button\" id=\"first\" value=\"<<\" />\n        <input type=\"button\" id=\"previous\" value=\"<\" />\n        <input type=\"button\" id=\"next\" value=\">\" />\n        <input type=\"button\" id=\"last\" value=\">>\" />\n    </nav>\n\n    <footer>\n        <a href=\"#\" id=\"blog_link-admin\">Admin</a>\n    </footer>"
+            }
+        },
+        {
+            "id":{
+                "enumerable":true,
+                "value":"admin"
+            },
+            "html":{
+                "enumerable":true,
+                "value":"\n        <div class='blogForm-container'>\n            <form id='blogForm'>\n                <h2>Make a Blog Post</h2>\n                <fieldset>\n                    <input type=\"text\" id=\"authorID\" name=\"authorName\" placeholder=\"Your name\">\n                </fieldset>\n                <fieldset>\n                    <input type=\"text\" id=\"titleID\" name=\"titleName\" placeholder=\"Blog title\">\n                </fieldset>\n                <fieldset>\n                    <input type=\"text\" id=\"tagsID\" name=\"tagsName\" placeholder=\"Tag your blog\">\n                </fieldset>\n                <fieldset>\n                    <textarea id=\"blogID\" name=\"blogName\" placeholder=\"Type your blog here...\"></textarea>\n                </fieldset> \n            </form>\n\n            <div class=\"button\">\n                <button id='submitButt' type=\"submit\">Post your blog article</button>\n            </div>\n        </div>\n\n        <section id='articles'>\n            <h2>Your Articles</h2>\n            \n            <div id='articleList'>\n\n            </div>\n        </section>"
+            }
+        }
+    ],
+    "navBar":[
+        {
+            "name":"Home"
+        },
+        {
+            "name":"Bio"
+        },
+        {
+            "name":"Resume"
+        },
+        {
+            "name":"Blog"
+        },
+        {
+            "name":"Projects"
+        }
+    ],
+    "articles":{
+        "-KzVZ7rxWyRT63o2nrfS":
+            {
+                "author":"Max Wolf",
+                "title":"How It's Made: Plumbuses",
+                "body":"Today on How They Do It : Plumbuses. Everyone has a plumbus in their home. First they take the dingle bop and they smooth it out with a bunch of schleem. The schleem is then...repurposed for later batches. They take the dingle bop and they push it through the grumbo, where the fleeb is rubbed against it. It's important that the fleeb is rubbed, becasue the fleeb has all the fleeb juice. Then, a schlami shows up, and he rubs it...and spits on it. They cut the fleeb. There's several hizzards in the way. The blamfs rub against the chumbles, and the...plubis, and grumbo are shaved away. That leaves you with...a regular old plumbus.",
+                "tags":[
+                        "Plumbus",
+                        "Schleem",
+                        "Shlami",
+                        "Fleeb"
+                ],
+                "published":"Sun Nov 19 2017 17:06:02 GMT-0600 (CST)"
+            },
+        "-KzV_LqTOPxHXovSC4EJ":
+            {
+                "author":"Max Wolf",
+                "title":"It's Just Two Brothers...",
+                "body":"t's in theaters now! Coming this summer...\nTwo brothers. In a van. And then a meteor hit. And they ran as fast as they could. From giant cat-monsters. And then a giant tornado came. And that's when things got knocked into twelfth gear...\nA Mexican... Armada shows up. With weapons made from to- tomatoes. And you better betch'ur bottom dollar that these two brothers know how to handle business.\nIn! 'Alien... Invasion Tomato Monster Mexican Armada Brothers... Who Are Just Regular Brothers Running... in a Van from an... Asteroid and All Sorts of Things: The Movie'.\nHold on! There's more. Old women are comin'! And they're also in the movie and they're gonna come... and cross... attack... these two brothers. But let's get back to the brothers because they're- they have a strong bond! You don't wanna know about it here, but I'll tell you one thing. The Moon. It comes crashing into Earth! And whaddya do then? It's two brothers and I- and... and they're gonna... it's called 'Two Brothers' ... 'Two Brothers'?... It's just called 'Two Brothers'!",
+                "tags": [
+                        "Tomato Monster",
+                        "Mexican Armada",
+                        "giant cat-monsters"
+                ],
+                "published":"Sun Nov 19 2017 17:03:13 GMT-0600 (CST)"
+            }
+    },
+    "resume": {
+        "Professional Experience":[
+            {
+                "name":"Klein Buendel Inc.",
+                "location":"Denver, CO",
+                "titles":[
+                    {
+                        "title":"Data Manager",
+                        "timeFrame":"September 2015 – April 2016",
+                        "duties":[
+                            "Oversee the data management of thirteen different research projects, simultaneously.",
+                            "Develop and refine data management procedures addressing all facets of company-wide data management.",
+                            "Evaluate processes and technologies to increase productivity and efficiency of data management team.",
+                            "Perform quality control audits to ensure accuracy, completeness, or proper functioning of systems and data."
+                        ]
+                    },
+                    {
+                        "title":"Data Coordinator",
+                        "timeFrame":"May 2013 – September 2015",
+                        "duties":[
+                            "Supervise work of data assistant, and developed their understanding of proper data management.",
+                            "Train staff on technical procedures and software usage.",
+                            "Analyze research data using appropriate statistical tools and prepare comprehensive data reports.",
+                            "Design and program surveys and forms for receiving, processing, or tracking data.",
+                            "Prepare appropriate formatting to data sets."
+                        ]
+                    },
+                    {
+                        "title":"Research Assistant",
+                        "timeFrame":"August 2012 – May 2013",
+                        "duties":[
+                            "Assist research coordinators and perform data entry work as required for various projects."
+                        ]
+                    },
+                    {
+                        "title":"Data Collector",
+                        "timeFrame":"May 2012 – August 2012",
+                        "duties":[
+                            "Observed and recorded shade usage data of people at Denver parks."
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Education":[
+            {
+                "name":"Warren Wilson College",
+                "location":"Asheville, NC",
+                "attended":"August 2005 - May 2011",
+                "gpa":"3.84",
+                "graduated":true,
+                "degreeAquired":true,
+                "degrees":[
+                    {
+                        "degree":"Anthropology and Sociology",
+                        "concentration":"Global Food Systems",
+                        "dateAquired":"May 2011",
+                        "degreeType":"Bachelor of Arts"
+                    },
+                    {
+                        "degree":"Environmental Studies",
+                        "concentration":"Sustainable Agriculture",
+                        "dateAquired":"May 2011",
+                        "degreeType":"Bachelor of Arts"
+                    }
+                ]
+            },
+            {
+                "name":"SUNY New Paltz",
+                "location":"New Paltz, NY",
+                "attended":"August 2007 - January 2008",
+                "gpa":"",
+                "graduated":false,
+                "degreeAquired":false,
+                "degrees":""
+            },
+            {
+                "name":"Brentwood High School",
+                "location":"Brentwood, TN",
+                "attended":"August 2001 - May 2005",
+                "gpa":"",
+                "graduated":true,
+                "degreeAquired":false,
+                "degrees":""
+            }
+        ],
+        "Skills":[
+            "Expert in Microsoft Excel, with focus on advanced functions and some VBA.",
+            "Proficient in Microsoft Access.",
+            "Basic understanding of SQL and Microsoft SQL Server.",
+            "Creating advanced questionnaires and forms in various survey creation programs.",
+            "Excellent in assembling computer components, assessing and fixing any hardware issues."
+        ],
+        "Professional Development":[
+            {
+                "name":"Certificate in Data Management for Clinical Research",
+                "location":"Coursara/Vanderbilt University",
+                "date":"October 2013"
+            }
+        ]
+    }
+}
+
